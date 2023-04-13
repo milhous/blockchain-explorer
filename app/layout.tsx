@@ -6,7 +6,7 @@ import {LayoutProps} from '.next/types/app/layout';
 
 export const metadata = {
   title: {
-    default: 'Milhouscan',
+    default: "Milhous's Blockchain Explorer",
     template: '%s | Milhouscan',
   },
   generator: 'Milhouscan',
