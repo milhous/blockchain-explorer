@@ -1,0 +1,52 @@
+{
+  "name": "blockchain-explorer",
+  "version": "1.0.0",
+  "packageManager": "yarn@3.5.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "update": "ncu -u --deep"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "i18next": "^22.4.14",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-chained-backend": "^4.2.0",
+    "i18next-fetch-backend": "^5.0.2",
+    "i18next-resources-to-backend": "^1.1.3",
+    "js-cookie": "^3.0.1",
+    "next": "^13.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
+    "swr": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11",
+    "@types/node": "18.15.11",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "autoprefixer": "^10.4.14",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "fs-extra": "^11.1.1",
+    "npm-check-updates": "^16.10.8",
+    "postcss": "^8.4.21",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "sass": "^1.62.0",
+    "tailwindcss": "^3.3.1",
+    "typescript": "5.0.4"
+  }
+}
