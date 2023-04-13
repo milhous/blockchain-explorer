@@ -9,11 +9,6 @@ const nextConfig = {
   images: {
     formats: ['image/webp'],
   },
-  env: {
-    alchemyKey: process.env.ALCHEMY_KEY,
-    walletConnectProjectId: process.env.WALLET_CONNECT_PROJECT_ID,
-    apiUrl: process.env.API_URL,
-  },
 };
 
 const config = {

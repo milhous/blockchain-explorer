@@ -1,4 +1,8 @@
+import dynamic from 'next/dynamic';
+import React from 'react';
+
 import './globals.scss';
+import {LayoutProps} from '.next/types/app/layout';
 
 export const metadata = {
   title: {
@@ -45,7 +49,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  // Layouts must accept a children prop.
+  // This will be populated with nested layouts or pages
+  children,
+}: LayoutProps) {
   return (
     <html>
       <body>{children}</body>
