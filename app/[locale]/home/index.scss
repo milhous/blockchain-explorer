@@ -1,0 +1,17 @@
+.page-home {
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(12.5%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    75% {
+      transform: translateX(-12.5%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  section {
+    @apply flex max-w-5xl flex-col items-center justify-center pb-14;
+  }
+}

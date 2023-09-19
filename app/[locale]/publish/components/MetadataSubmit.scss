@@ -1,0 +1,19 @@
+.publish-submit {
+  @apply pb-12;
+
+  article {
+    @apply mx-auto w-full max-w-3xl space-y-6 pb-12;
+
+    dt {
+      @apply text-xl font-semibold text-black dark:text-white;
+    }
+
+    dd {
+      @apply mt-2;
+    }
+  }
+
+  aside {
+    @apply flex items-center justify-center space-x-12;
+  }
+}

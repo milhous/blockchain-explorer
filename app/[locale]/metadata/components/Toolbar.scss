@@ -1,0 +1,7 @@
+.metadata-toolbar {
+  @apply flex max-w-5xl flex-col items-center justify-between space-y-2 pt-14 sm:flex-row sm:space-x-2 sm:space-y-0;
+
+  &_box {
+    @apply flex w-full max-w-5xl items-center justify-between space-x-2 sm:w-auto;
+  }
+}

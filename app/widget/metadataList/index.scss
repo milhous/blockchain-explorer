@@ -1,0 +1,15 @@
+.widget-metadata_list {
+  @apply w-full;
+
+  h3 {
+    @apply mb-6 w-full text-lg font-semibold capitalize;
+  }
+
+  .grid-list {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .entity-list {
+    @apply space-y-6;
+  }
+}

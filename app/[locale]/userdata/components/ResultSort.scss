@@ -1,0 +1,54 @@
+.metadata-sort {
+  @apply box-border h-10 w-full rounded-md border border-borderColor bg-boxColor dark:border-borderDarkColor dark:bg-boxDarkColor sm:w-auto;
+
+  ul {
+    @apply flex h-full items-center whitespace-nowrap text-sm;
+
+    li {
+      @apply cursor-pointer select-none border-l border-borderColor px-6 uppercase first:border-none hover:text-hoverColor dark:border-borderDarkColor dark:hover:text-hoverDarkColor;
+
+      &.up,
+      &.down {
+        @apply text-black dark:text-white;
+      }
+
+      &.up {
+        span:before {
+          @apply border-black dark:border-white;
+        }
+      }
+
+      &.down {
+        span:after {
+          @apply border-black dark:border-white;
+        }
+      }
+
+      span {
+        @apply relative;
+
+        &:before,
+        &:after {
+          @apply absolute -right-1 block h-0 w-0 translate-x-full border-x-4 border-textColor dark:border-textDarkColor;
+
+          border-left-color: transparent !important;
+          border-right-color: transparent !important;
+          content: '.';
+          text-indent: -9999px;
+        }
+
+        &:before {
+          @apply bottom-1/2 -translate-y-1/4 border-b-4;
+
+          border-top-color: transparent !important;
+        }
+
+        &:after {
+          @apply top-1/2 translate-y-1/4 border-t-4;
+
+          border-bottom-color: transparent !important;
+        }
+      }
+    }
+  }
+}

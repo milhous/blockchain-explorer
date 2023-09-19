@@ -1,0 +1,11 @@
+.save-userdata {
+  @apply max-w-5xl pb-14;
+
+  & > div {
+    @apply flex-col items-center justify-center rounded-md border border-borderColor bg-boxColor p-6 shadow dark:border-borderDarkColor dark:bg-boxDarkColor;
+  }
+
+  .connect-wallet {
+    @apply aspect-[16/6];
+  }
+}

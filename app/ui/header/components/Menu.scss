@@ -1,0 +1,15 @@
+.ui-header-menu {
+  &_content {
+    ul {
+      @apply divide-y divide-borderColor dark:divide-borderDarkColor;
+    }
+
+    li {
+      @apply flex items-center justify-between py-3 capitalize;
+    }
+
+    a {
+      @apply block capitalize transition-colors hover:text-hoverColor dark:hover:text-hoverDarkColor;
+    }
+  }
+}

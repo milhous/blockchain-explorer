@@ -1,0 +1,31 @@
+.save-details {
+  @apply pb-12;
+
+  article {
+    @apply mx-auto w-full max-w-3xl space-y-6 pb-12;
+
+    p {
+      @apply break-words pb-6 text-center;
+    }
+
+    .userdata {
+      @apply divide-y divide-borderColor rounded-md border border-solid border-borderColor dark:divide-borderDarkColor dark:border-borderDarkColor;
+
+      dl {
+        @apply grid grid-cols-4 divide-x divide-borderColor break-all text-center dark:divide-borderDarkColor;
+      }
+
+      dt {
+        @apply flex items-center justify-center bg-highlightBgColor p-3 text-black dark:bg-highlightBgDarkColor dark:text-white;
+      }
+
+      dd {
+        @apply col-span-3 p-3;
+      }
+    }
+  }
+
+  aside {
+    @apply flex items-center justify-center space-x-12;
+  }
+}

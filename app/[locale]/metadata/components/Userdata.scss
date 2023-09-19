@@ -1,0 +1,31 @@
+.metadata-userdata {
+  @apply max-w-5xl;
+
+  .card {
+    @apply flex flex-col justify-center;
+  }
+
+  .no-data {
+    @apply relative flex min-h-[30dvh] flex-col items-center justify-center py-12;
+
+    h3 {
+      @apply text-lg font-semibold text-black dark:text-white;
+    }
+  }
+
+  &_list {
+    @apply divide-y divide-borderColor dark:divide-borderDarkColor;
+  }
+
+  ul {
+    @apply space-y-2 py-6;
+
+    li {
+      @apply text-sm capitalize;
+    }
+
+    span {
+      @apply whitespace-break-spaces break-all text-base text-black dark:text-white;
+    }
+  }
+}

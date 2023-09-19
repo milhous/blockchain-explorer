@@ -1,0 +1,15 @@
+.widget-theme {
+  @apply flex items-center space-x-1 rounded-md border border-borderColor bg-boxColor p-1 dark:border-borderDarkColor dark:bg-boxDarkColor;
+
+  button {
+    @apply flex items-center rounded-md p-[5px];
+
+    &.btn-light {
+      @apply bg-highlightBgColor text-black shadow dark:bg-transparent dark:text-textColor dark:shadow-none dark:hover:text-hoverDarkColor;
+    }
+
+    &.btn-dark {
+      @apply hover:text-hoverColor dark:bg-highlightBgDarkColor dark:text-white dark:shadow;
+    }
+  }
+}

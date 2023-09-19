@@ -1,0 +1,15 @@
+.metadata-switch {
+  @apply flex items-center space-x-1 rounded-md border border-borderColor bg-boxColor p-1 dark:border-borderDarkColor dark:bg-boxDarkColor;
+
+  button {
+    @apply flex items-center rounded-md p-[5px] transition-colors;
+
+    &:hover {
+      @apply hover:text-hoverColor dark:hover:text-hoverDarkColor;
+    }
+
+    &.active {
+      @apply bg-highlightBgColor text-black shadow hover:text-black dark:bg-highlightBgDarkColor dark:text-white dark:hover:text-white;
+    }
+  }
+}

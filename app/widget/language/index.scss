@@ -1,0 +1,54 @@
+.widget-language {
+  @apply relative;
+
+  &:hover {
+    div {
+      @apply block;
+    }
+  }
+
+  svg {
+    @apply cursor-pointer hover:text-hoverColor dark:hover:text-hoverDarkColor;
+  }
+
+  div {
+    @apply absolute left-1/2 top-full hidden -translate-x-1/2 pt-3;
+
+    &:before,
+    &:after {
+      @apply absolute left-1/2 top-2 h-2.5 w-2.5 bg-white dark:bg-black;
+
+      content: '.';
+      text-indent: -9999px;
+      transform: translateX(-50%) rotate(225deg);
+    }
+
+    &:before {
+      @apply z-10 shadow-sm shadow-black/20 dark:shadow-white/20;
+    }
+
+    &:after {
+      @apply z-30;
+    }
+  }
+
+  ul {
+    @apply relative z-20 divide-y divide-borderColor rounded-md border border-borderColor bg-white px-2 shadow-sm shadow-black/20 dark:divide-borderDarkColor dark:border-borderDarkColor dark:bg-black dark:shadow-white/20;
+  }
+
+  li {
+    @apply text-sm capitalize whitespace-nowrap;
+  }
+
+  a, span {
+    @apply block px-1 py-2;
+  }
+
+  span {
+    @apply text-black dark:text-white;
+  }
+
+  a {
+    @apply  transition-colors hover:text-hoverColor dark:hover:text-hoverDarkColor;
+  }
+}

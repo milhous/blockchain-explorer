@@ -1,0 +1,11 @@
+.metadata-search {
+  @apply w-full;
+
+  .btn-clear {
+    @apply cursor-pointer hover:text-hoverColor dark:hover:text-hoverDarkColor;
+
+    &.disabled {
+      @apply invisible;
+    }
+  }
+}

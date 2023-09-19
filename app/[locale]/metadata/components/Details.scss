@@ -1,0 +1,79 @@
+.metadata-details {
+  @apply max-w-5xl;
+
+  .card {
+    @apply flex flex-col lg:flex-row;
+  }
+
+  article,
+  aside {
+    @apply space-y-6;
+  }
+
+  article {
+    @apply w-full p-6 pb-12 lg:pb-6 lg:pr-12;
+
+    h3 {
+      @apply break-words text-3xl font-semibold capitalize text-black dark:text-white;
+    }
+
+    p {
+      @apply break-words text-lg;
+    }
+
+    ul {
+      @apply space-y-1;
+
+      li {
+        @apply relative break-words px-6;
+
+        &:before {
+          @apply absolute left-0 top-1/2 block h-2 w-2 -translate-y-1/2 rounded-full bg-black dark:bg-white;
+
+          content: '.';
+          text-indent: -9999px;
+        }
+
+        strong {
+          @apply text-black dark:text-white;
+        }
+      }
+    }
+
+    .metadata {
+      @apply divide-y divide-borderColor rounded-md border border-solid border-borderColor dark:divide-borderDarkColor dark:border-borderDarkColor;
+
+      dl {
+        @apply grid grid-cols-4 divide-x divide-borderColor break-all text-center dark:divide-borderDarkColor;
+
+        &:first-child {
+          @apply bg-highlightBgColor text-black dark:bg-highlightBgDarkColor dark:text-white;
+        }
+      }
+
+      dt {
+        @apply p-3;
+      }
+
+      dd {
+        @apply col-span-3 p-3;
+      }
+    }
+  }
+
+  aside {
+    @apply whitespace-nowrap border-t p-6 pt-12 dark:border-borderDarkColor lg:max-w-[30%] lg:border-l lg:border-t-0 lg:border-borderColor lg:pl-12 lg:pt-6;
+
+    dt {
+      @apply text-sm capitalize;
+    }
+
+    dd {
+      @apply mt-1 text-black dark:text-white;
+    }
+
+    .btn {
+      @apply flex w-full items-center justify-center pt-6;
+    }
+  }
+}

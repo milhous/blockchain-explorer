@@ -1,0 +1,30 @@
+version: '3.8'
+
+networks:
+  backend:
+    name: ${NETWORK_BACKEND_NAME}
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${APP_CONTAINER_NAME}
+    environment:
+      - APP_CONTAINER_NAME=${APP_CONTAINER_NAME}
+      - APP_HOST=${APP_HOST}
+      - APP_PORT=${APP_PORT}
+
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_URL=${DATABASE_URL}
+      - DATABASE_URL_WITH_SCHEMA=${DATABASE_URL_WITH_SCHEMA}
+
+      - NETWORK_BACKEND_NAME=${NETWORK_BACKEND_NAME}
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    networks:
+      - backend

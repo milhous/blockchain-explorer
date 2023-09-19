@@ -1,0 +1,55 @@
+.widget-metadata_card {
+  @apply cursor-pointer rounded-md border border-borderColor bg-boxColor p-6 shadow transition-colors hover:border-hoverColor hover:shadow-lg dark:border-borderDarkColor dark:bg-boxDarkColor dark:hover:border-hoverDarkColor dark:hover:bg-highlightBgDarkColor;
+
+  dt {
+    @apply text-lg font-semibold text-black dark:text-white;
+  }
+
+  dd {
+    @apply mt-1 text-sm;
+  }
+
+  ul {
+    @apply mt-4 flex flex-wrap text-sm;
+
+    li {
+      @apply whitespace-nowrap border-l border-borderColor first:border-l-0 first:pl-0 dark:border-borderDarkColor;
+    }
+  }
+
+  &.grid-card {
+    dt {
+      @apply truncate;
+    }
+
+    dd {
+      @apply line-clamp-2 h-10;
+    }
+
+    li {
+      @apply px-2;
+    }
+
+    li:last-child {
+      @apply mt-4 w-full border-l-0 pl-0;
+    }
+  }
+
+  &.entity-card {
+    dt {
+      @apply line-clamp-2 max-h-[56px];
+    }
+
+    dd {
+      @apply line-clamp-3 max-h-[60px];
+    }
+
+    li {
+      @apply px-4;
+    }
+
+    li:last-child {
+      @apply mt-4 w-full border-l-0 pl-0 sm:mt-0 sm:w-auto sm:border-l sm:pl-4;
+    }
+  }
+}

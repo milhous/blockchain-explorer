@@ -1,0 +1,27 @@
+.publish-result {
+  @apply relative flex aspect-video w-full flex-col items-center justify-center space-y-12 pb-12;
+
+  svg {
+    @apply h-16 w-16 text-black dark:text-white;
+  }
+
+  dl {
+    @apply text-center;
+  }
+
+  dt {
+    @apply text-xl font-semibold capitalize text-black dark:text-white;
+  }
+
+  dd {
+    @apply mt-2;
+  }
+
+  p {
+    @apply break-all;
+  }
+
+  .reslut-svga {
+    @apply pointer-events-none absolute left-1/2 top-1/2 h-auto w-full -translate-x-1/2 -translate-y-3/4;
+  }
+}

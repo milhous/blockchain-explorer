@@ -1,0 +1,38 @@
+.publish-preview {
+  @apply pb-12;
+
+  article {
+    @apply mx-auto w-full max-w-3xl space-y-6 pb-12;
+
+    h3 {
+      @apply break-words text-3xl font-semibold capitalize text-black dark:text-white;
+    }
+
+    p {
+      @apply break-words text-lg capitalize;
+    }
+
+    ul {
+      @apply space-y-1;
+
+      li {
+        @apply relative break-words px-6;
+
+        &:before {
+          @apply absolute left-0 top-1/2 block h-2 w-2 -translate-y-1/2 rounded-full bg-black dark:bg-white;
+
+          content: '.';
+          text-indent: -9999px;
+        }
+
+        strong {
+          @apply capitalize text-black dark:text-white;
+        }
+      }
+    }
+  }
+
+  aside {
+    @apply flex items-center justify-center space-x-12;
+  }
+}

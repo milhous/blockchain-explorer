@@ -1,0 +1,43 @@
+.widget-about {
+  section {
+    @apply relative box-border flex flex-col items-center justify-center overflow-hidden py-28;
+
+    &:before,
+    &:after {
+      @apply absolute left-1/2 z-10 block aspect-square w-full -translate-x-1/2;
+
+      content: '.';
+      text-indent: -9999px;
+      min-width: 768px;
+    }
+
+    &:before {
+      @apply opacity-100 dark:opacity-0;
+
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 50%);
+    }
+
+    &:after {
+      @apply opacity-0 dark:opacity-100;
+
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%);
+    }
+  }
+
+  svg {
+    @apply absolute left-1/2 top-1/2 block h-[110%] w-auto -translate-x-1/2 -translate-y-1/2;
+  }
+
+  h2,
+  h3 {
+    @apply relative z-20 text-center;
+  }
+
+  h2 {
+    @apply max-w-[16em] text-4xl font-bold capitalize text-black dark:text-white;
+  }
+
+  h3 {
+    @apply mt-6 max-w-[40em] text-xl;
+  }
+}

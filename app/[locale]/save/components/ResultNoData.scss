@@ -1,0 +1,23 @@
+.metadata-result {
+  @apply relative flex min-h-[50dvh] max-w-5xl flex-col items-center pb-12 pt-6;
+
+  .spinner,
+  .no-data,
+  .error {
+    @apply absolute inset-0 box-border flex flex-col items-center justify-center p-6;
+  }
+
+  .no-data {
+    h3 {
+      @apply text-lg font-semibold text-black dark:text-white;
+    }
+
+    p {
+      @apply mx-auto mt-4 whitespace-pre-line text-center text-sm;
+    }
+
+    strong {
+      @apply block break-all py-1;
+    }
+  }
+}

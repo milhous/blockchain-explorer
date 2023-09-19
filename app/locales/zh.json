@@ -1,0 +1,94 @@
+{
+    "common": {
+        "name": "名称",
+        "data_volume": "数据量",
+        "time": "时间",
+        "owner": "所有者",
+        "created": "创建时间",
+        "metadata": "元数据",
+        "preview": "预览",
+        "submit": "提交",
+        "result": "结果",
+        "save": "保存",
+        "publish": "发布",
+        "title": "标题",
+        "description": "描述",
+        "metadata_name": "Metadata 名称",
+        "metadata_fields": "Metadata 字段",
+        "terms_conditions": "我同意条款和条件"
+    },
+    "error": {
+        "search": {
+            "no_results": "未找到结果",
+            "no_results_desc": "您对<query>query</query>的查询没有返回任何结果。"
+        } 
+    },
+    "btn": {
+        "view_all_metadata": "查看 Metadata",
+        "view_all_userdata": "查看 Userdata",
+        "connect_wallet": "连接钱包",
+        "continue": "继续",
+        "back": "返回",
+        "submit": "提交",
+        "buy": "购买",
+        "save_userdata": "保存数据",
+        "save": "保存",
+        "publish": "发布",
+        "query": "查询"
+    },
+    "nav": {
+        "home": "首页",
+        "metadata": "meadata",
+        "userdata": "userdata",
+        "published": "已发布",
+        "publish": "发布",
+        "save": "保存",
+        "profile": "个人资料",
+        "contact": "联系",
+        "theme": "主题"
+    },
+    "home": {
+        "about": {
+            "title": "数据市场",
+            "desc": "一个专注于满足您数据需求的市场平台，为您提供便捷的数据查找、发布和交易服务。"
+        },
+        "recently_published": {
+            "title": "最近发布"
+        },
+        "most_data": {
+            "title": "最多数据"
+        },
+        "contact": {
+            "title": "与我们的销售团队交谈",
+            "desc": "我们将帮助您找到适合您业务的计划和定价。",
+            "btn": "联系我们"
+        }
+    },
+    "publish": {
+        "about": {
+            "title": "发布到数据市场",
+            "desc": "突出您的数据的重要特征，使其更易被发现，并引起数据消费者的兴趣。"
+        },
+        "preview": {
+            "sample_tables": "示例表格"
+        },
+        "result": {
+            "title": "数据已发布",
+            "desc": "您已成功将数据发布到数据市场中。"
+        }
+    },
+    "save": {
+        "about": {
+            "title": "保存和发布数据",
+            "desc": "突出您的数据的重要特征，使其更易被发现，并引起数据消费者的兴趣。"
+        },
+        "query": {
+            "title": "查询",
+            "desc": "输入 MetaID 以查询 Userdata 模板。"
+        },
+        "result": {
+            "title": "数据已发布",
+            "desc": "您已成功将数据发布到数据市场中。"
+        }
+    }  
+}

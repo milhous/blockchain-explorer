@@ -1,0 +1,94 @@
+{
+    "common": {
+        "name": "name",
+        "data_volume": "data volume",
+        "time": "time",
+        "owner": "owner",
+        "created": "created",
+        "metadata": "metadata",  
+        "preview": "preview",
+        "submit": "submit",
+        "result": "result",
+        "save": "save",
+        "publish": "publish",
+        "title": "title",
+        "description": "description",
+        "metadata_name": "metadata name",
+        "metadata_fields": "metadata fields",
+        "terms_conditions": "I agree to the Terms and Conditions"
+    },
+    "error": {
+        "search": {
+            "no_results": "No Results Found",
+            "no_results_desc": "Your search for<query>query</query>did not return any results."
+        } 
+    },
+    "btn": {
+        "view_all_metadata": "view all metadata",
+        "view_all_userdata": "view all userdata",
+        "connect_wallet": "connect wallet",
+        "continue": "continue",
+        "back": "back",
+        "submit": "submit",
+        "buy": "buy",
+        "save_userdata": "save userdata",
+        "save": "save",
+        "publish": "publish",
+        "query": "query"
+    },
+    "nav": {
+        "home": "home",
+        "metadata": "meadata",
+        "userdata": "userdata",
+        "published": "published",
+        "publish": "publish",
+        "save": "save",
+        "profile": "profile",
+        "contact": "contact",
+        "theme": "theme"
+    },
+    "home": {
+        "about": {
+            "title": "Data Market",
+            "desc": "A specialized marketplace platform focused on catering to your data requirements, providing seamless services for data discovery, publication, and trading."
+        },
+        "recently_published": {
+            "title": "recently published"
+        },
+        "most_data": {
+            "title": "most data"
+        },
+        "contact": {
+            "title": "Talk to our Sales team",
+            "desc": "We&apos;ll help you find the right plan and pricing for your business.",
+            "btn": "Contact Sales"
+        }
+    },
+    "publish": {
+        "about": {
+            "title": "Publish metadata",
+            "desc": "Highlight the important features of your data to make it more discoverable and catch the interest of data consumers."
+        },
+        "preview": {
+            "sample_tables": "sample tables"
+        },
+        "result": {
+            "title": "Data published",
+            "desc": "You have successfully publish your data into data market."
+        }
+    },
+    "save": {
+        "about": {
+            "title": "Save and publish userdata",
+            "desc": "Highlight the important features of your data to make it more discoverable and catch the interest of data consumers."
+        },
+        "query": {
+            "title": "Query",
+            "desc": "Enter metaID to query Userdata template."
+        },
+        "result": {
+            "title": "Data published",
+            "desc": "You have successfully publish your data into data market."
+        }
+    } 
+}

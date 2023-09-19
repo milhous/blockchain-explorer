@@ -3,15 +3,7 @@
  * @param {any} rules 规则
  */
 const files = rules => {
-  let svgLoaderOptions = {};
-
-  for (const rule of rules) {
-    if (rule.test && rule.options && ('' + rule.test).includes('svg')) {
-      svgLoaderOptions = rule.options;
-
-      break;
-    }
-  }
+  const fileLoaderRule = rules.find(rule => rule.test?.test?.('.svg'));
 
   // 文件配置
   const fileConfig = [];
@@ -19,12 +11,11 @@ const files = rules => {
   // svg通过url方式加载
   fileConfig.push({
     test: /\.svg$/i,
-    issuer: /\.[jt]sx?$/,
     resourceQuery: /url/,
     use: [
       {
-        loader: 'next-image-loader',
-        options: svgLoaderOptions,
+        loader: fileLoaderRule.loader,
+        options: fileLoaderRule.options,
       },
       {
         loader: 'svgo-loader',
@@ -48,8 +39,8 @@ const files = rules => {
   // svg通过inline方式加载
   fileConfig.push({
     test: /\.svg$/i,
-    issuer: /\.[jt]sx?$/,
-    resourceQuery: {not: [/url/]},
+    issuer: fileLoaderRule.issuer,
+    resourceQuery: {not: [...fileLoaderRule.resourceQuery.not, /url/]},
     use: [
       {
         loader: '@svgr/webpack',

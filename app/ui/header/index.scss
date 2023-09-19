@@ -1,0 +1,35 @@
+.ui-header {
+  @apply sticky top-0 z-30 border-b border-borderColor bg-white/20 backdrop-blur dark:border-borderDarkColor dark:bg-black/20;
+
+  section {
+    @apply flex items-center justify-between space-x-6 py-4;
+  }
+
+  img {
+    @apply block h-8 w-auto;
+  }
+
+  h1 {
+    @apply whitespace-nowrap text-[16px] font-semibold uppercase tracking-widest text-black dark:text-white;
+  }
+
+  nav {
+    @apply box-border hidden w-full items-center space-x-2 text-sm md:flex;
+
+    a {
+      @apply block px-3 capitalize transition-colors hover:text-hoverColor dark:hover:text-hoverDarkColor;
+    }
+  }
+
+  .toolbar {
+    @apply flex items-center space-x-6;
+
+    &-theme {
+      @apply hidden md:block;
+    }
+
+    &-menu {
+      @apply md:hidden;
+    }
+  }
+}

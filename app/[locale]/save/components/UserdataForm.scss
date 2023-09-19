@@ -1,0 +1,47 @@
+.save-form {
+  @apply mx-auto w-full max-w-3xl pb-12;
+
+  h2 {
+    @apply break-words text-center text-lg font-semibold capitalize text-black dark:text-white;
+  }
+
+  p {
+    @apply break-words pb-6 pt-2 text-center;
+  }
+
+  form {
+    @apply mt-6 space-y-6;
+
+    & > div {
+      @apply space-y-2;
+    }
+
+    h3 {
+      @apply capitalize;
+    }
+
+    label {
+      @apply flex cursor-pointer justify-center;
+    }
+
+    .form-list {
+      @apply space-y-6;
+    }
+
+    .form-fields {
+      @apply flex items-center justify-between space-x-4;
+
+      & > div {
+        @apply grid w-full grid-rows-2 gap-4 sm:grid-cols-2 sm:grid-rows-1;
+      }
+
+      & > svg {
+        @apply cursor-pointer hover:text-hoverColor dark:hover:text-hoverDarkColor;
+
+        &.disabled {
+          @apply cursor-default hover:text-textColor dark:hover:text-textDarkColor;
+        }
+      }
+    }
+  }
+}

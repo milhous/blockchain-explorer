@@ -1,0 +1,48 @@
+.widget-userdata_card {
+  @apply rounded-md border border-borderColor bg-boxColor p-6 shadow transition-colors hover:border-hoverColor hover:shadow-lg dark:border-borderDarkColor dark:bg-boxDarkColor dark:hover:border-hoverDarkColor dark:hover:bg-highlightBgDarkColor;
+
+  dt,
+  dd {
+    @apply break-all;
+  }
+
+  dt {
+    @apply text-lg font-semibold text-black dark:text-white;
+  }
+
+  dd {
+    @apply mt-1 text-sm;
+  }
+
+  ul {
+    @apply mt-4 flex flex-wrap text-sm;
+
+    li {
+      @apply border-l border-borderColor first:border-l-0 first:pl-0 dark:border-borderDarkColor;
+    }
+
+    span {
+      @apply whitespace-break-spaces break-all;
+    }
+  }
+
+  &.grid-card {
+    li {
+      @apply px-2;
+    }
+
+    li:last-child {
+      @apply mt-4 w-full border-l-0 pl-0;
+    }
+  }
+
+  &.entity-card {
+    li {
+      @apply px-4;
+    }
+
+    li:last-child {
+      @apply mt-4 w-full border-l-0 pl-0 sm:mt-0 sm:w-auto sm:border-l sm:pl-4;
+    }
+  }
+}

@@ -26,9 +26,6 @@ const webpack = config => {
 
   config.plugins.push(...pluginsConfig);
 
-  // 解决 Critical dependency: the request of a dependency is an expression
-  config.module.noParse = /iconv-loader\.js/;
-
   return config;
 };
 

@@ -1,0 +1,114 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model blocks {
+  block_id     Int            @unique @default(autoincrement())
+  block_num    Int
+  network_id   Int
+  channel_id   Int
+  channels     channels       @relation(fields: [channel_id], references: [channel_id], onDelete: NoAction, onUpdate: NoAction)
+  networks     networks       @relation(fields: [network_id], references: [network_id], onDelete: NoAction, onUpdate: NoAction)
+  transactions transactions[]
+
+  @@id([block_num, network_id, channel_id])
+  @@index([block_id])
+}
+
+model chaincodes {
+  chaincode_id Int            @unique @default(autoincrement())
+  name         String
+  version      String
+  network_id   Int
+  channel_id   Int
+  channels     channels       @relation(fields: [channel_id], references: [channel_id], onDelete: NoAction, onUpdate: NoAction)
+  networks     networks       @relation(fields: [network_id], references: [network_id], onDelete: NoAction, onUpdate: NoAction)
+  metadata     metadata[]
+  transactions transactions[]
+  userdata     userdata[]
+
+  @@id([name, network_id, channel_id])
+  @@index([chaincode_id])
+}
+
+model channels {
+  channel_id Int          @id @default(autoincrement())
+  name       String       @unique
+  blocks     blocks[]
+  chaincodes chaincodes[]
+
+  @@index([channel_id])
+}
+
+model metadata {
+  meta_id         String     @id
+  data_title      String
+  data_desc       String
+  data_meta       String
+  data_owner      String
+  create_datetime String
+  msp_id          Int
+  chaincode_id    Int
+  chaincodes      chaincodes @relation(fields: [chaincode_id], references: [chaincode_id], onDelete: NoAction, onUpdate: NoAction)
+  msps            msps       @relation(fields: [msp_id], references: [msp_id], onDelete: NoAction, onUpdate: NoAction)
+  userdata        userdata[]
+
+  @@index([meta_id])
+}
+
+model networks {
+  network_id Int          @id @default(autoincrement())
+  name       String       @unique
+  blocks     blocks[]
+  chaincodes chaincodes[]
+
+  @@index([network_id])
+}
+
+model transactions {
+  txhash       String     @id
+  read_set     Json
+  write_set    Json
+  createdt     DateTime   @default(now()) @db.Timestamptz(6)
+  msp_id       Int
+  block_id     Int
+  chaincode_id Int
+  blocks       blocks     @relation(fields: [block_id], references: [block_id], onDelete: NoAction, onUpdate: NoAction)
+  chaincodes   chaincodes @relation(fields: [chaincode_id], references: [chaincode_id], onDelete: NoAction, onUpdate: NoAction)
+  msps         msps       @relation(fields: [msp_id], references: [msp_id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([txhash])
+  @@index([write_set], type: Gin)
+}
+
+model userdata {
+  datahash        String
+  data_owner      String
+  create_datetime String
+  meta_id         String
+  msp_id          Int
+  chaincode_id    Int
+  chaincodes      chaincodes @relation(fields: [chaincode_id], references: [chaincode_id], onDelete: NoAction, onUpdate: NoAction)
+  metadata        metadata   @relation(fields: [meta_id], references: [meta_id], onDelete: NoAction, onUpdate: NoAction)
+  msps            msps       @relation(fields: [msp_id], references: [msp_id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([datahash, meta_id])
+  @@index([datahash])
+  @@index([meta_id])
+}
+
+model msps {
+  msp_id       Int            @id @default(autoincrement())
+  name         String         @unique
+  metadata     metadata[]
+  transactions transactions[]
+  userdata     userdata[]
+
+  @@index([msp_id])
+}

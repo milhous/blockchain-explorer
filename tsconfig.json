@@ -22,20 +22,16 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@actions/*": ["app/actions/*"],
       "@assets/*": ["app/assets/*"],
       "@libs/*": ["app/libs/*"],
       "@ui/*": ["app/ui/*"],
       "@widget/*": ["app/widget/*"],
-      "@web3/*": ["app/web3/*"]
+      "@store/*": ["app/store/*"],
+      "@test/*": ["app/test/*"]
     },
     "strictNullChecks": true
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "next.config.js"
-  ],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "next.config.js", "**/*.d.ts"],
   "exclude": ["node_modules"]
 }
